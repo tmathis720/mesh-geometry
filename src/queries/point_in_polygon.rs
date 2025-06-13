@@ -1,0 +1,3 @@
+//! Point-in-polygon queries for mesh-geometry.
+
+// ...implement point-in-polygon logic here...

@@ -1,0 +1,3 @@
+//! Affine transforms and Jacobians for mesh-geometry.
+
+// ...implement transforms here...

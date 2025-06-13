@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          components: rustfmt, clippy
+      - name: Format & Lint
+        run: cargo fmt -- --check && cargo clippy --all-targets -- -D warnings
+      - name: Test
+        run: cargo test --all-features
+      - name: Benchmarks
+        run: cargo bench -- --nocapture

@@ -1,0 +1,3 @@
+//! Ray-triangle intersection queries for mesh-geometry.
+
+// ...implement ray-triangle intersection logic here...

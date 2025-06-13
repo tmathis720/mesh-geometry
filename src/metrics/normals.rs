@@ -1,0 +1,3 @@
+//! Face normals and projected area for mesh-geometry.
+
+// ...implement normal calculations here...
