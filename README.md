@@ -2,9 +2,9 @@
 
 [![crates.io](https://img.shields.io/crates/v/mesh-geometry.svg)](https://crates.io/crates/mesh-geometry)
 [![docs.rs](https://docs.rs/mesh-geometry/badge.svg)](https://docs.rs/mesh-geometry)
-[![CI](https://github.com/your-org/mesh-geometry/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/mesh-geometry/actions)
+[![CI](https://github.com/tmathis720/mesh-geometry/actions/workflows/ci.yml/badge.svg)](https://github.com/tmathis720/mesh-geometry/actions)
 
-High-performance, no_std-compatible geometry utilities for coastal/ocean FVM meshes.
+High-performance, no_std-compatible geometry utilities for spatially discrete meshes.
 
 ## Features
 - Core types: `Point2`, `Point3`, `Vec2`, `Vec3` with arithmetic, dot/cross, and conversion utilities.

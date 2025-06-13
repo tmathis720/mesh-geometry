@@ -3,7 +3,7 @@
 
 //! # mesh-geometry
 //!
-//! High-performance, no_std-compatible geometry primitives and metrics for coastal/ocean FVM meshes.
+//! High-performance, no_std-compatible geometry primitives and metrics for spatially discrete meshes.
 //!
 //! ## Features
 //! - Core types: `Point2`, `Point3`, `Vec2`, `Vec3` with arithmetic, dot/cross, and conversion utilities.
@@ -27,13 +27,13 @@
 //! assert!((vol - 1.0_f64/6.0_f64).abs() < 1e-12_f64);
 //! ```
 //!
-//! More examples: see [examples/](https://github.com/your-org/mesh-geometry/tree/main/examples) and the [README](https://github.com/your-org/mesh-geometry#examples).
+//! More examples: see [examples/](https://github.com/tmathis720/mesh-geometry/tree/main/examples) and the [README](https://github.com/your-org/mesh-geometry#examples).
 //!
 //! ## Documentation
 //! - [docs.rs/mesh-geometry](https://docs.rs/mesh-geometry)
 //!
 //! ## License
-//! MIT OR Apache-2.0
+//! MIT
 
 /// Prelude for ergonomic imports (core types, traits, and utilities).
 pub mod prelude;
@@ -49,14 +49,16 @@ pub mod point;
 /// 2D/3D vector types and operations.
 pub mod vec;
 
-/// Cell metrics: area, centroid, volume, normals, etc.
+/// Cell metrics: area, centroid, volume, normals, polygon, prism
 pub mod metrics;
-pub use metrics::polygon_area;
-pub use metrics::polygon_centroid;
-pub use metrics::prism_volume;
-pub use metrics::prism_centroid;
-pub use metrics::tetrahedron_volume;
-pub use metrics::hexahedron_volume;
+pub use metrics::{
+    triangle_area, quad_area,
+    triangle_centroid, quad_centroid, tetrahedron_centroid, hexahedron_centroid,
+    tetrahedron_volume, hexahedron_volume,
+    face_normal, projected_area,
+    polygon_area, polygon_centroid,
+    prism_volume, prism_centroid,
+};
 
 /// Geometry queries: point-in-polygon, ray-triangle, distance, etc.
 pub mod queries;
