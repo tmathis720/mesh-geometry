@@ -22,7 +22,3 @@ nalgebra = { version = "0.32", optional = true}
 criterion = "0.4"
 proptest = "1.0"
 approx = "0.5"
-
-
-[workspace]
-# (if part of a larger workspace)
